@@ -2,6 +2,8 @@
 # JBCalendarDatePicker
 A replacement for UIDatePicker made for Catalyst.
 
+This is still a work in progress, there are bugs, and although it's written to work with different calendar systems and locales, it's not guaranteed to work correctly with everything!
+
 ## Installation
 
 To install, add the source to the top of your podfile:
