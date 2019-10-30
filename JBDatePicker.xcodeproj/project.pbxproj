@@ -8,12 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		54947CEA2369E52300986ACA /* JBDatePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 54947CE82369E52300986ACA /* JBDatePicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		54947CFB2369E5D200986ACA /* JBCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54947CF52369E5D100986ACA /* JBCalendarViewController.swift */; };
+		54947CFC2369E5D200986ACA /* DateInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54947CF12369E5D100986ACA /* DateInputView.swift */; };
+		54947CFD2369E5D200986ACA /* JBCalendarDateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54947CF42369E5D100986ACA /* JBCalendarDateCell.swift */; };
+		54947CFE2369E5D200986ACA /* JBDatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54947CF92369E5D200986ACA /* JBDatePickerViewController.swift */; };
+		54947CFF2369E5D200986ACA /* JBDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54947CF82369E5D200986ACA /* JBDatePicker.swift */; };
+		54947D002369E5D200986ACA /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54947CF32369E5D100986ACA /* Day.swift */; };
+		54947D012369E5D200986ACA /* UIColor+SystemAccent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54947CF02369E5D100986ACA /* UIColor+SystemAccent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		54947CE52369E52300986ACA /* JBDatePicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JBDatePicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		54947CE82369E52300986ACA /* JBDatePicker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JBDatePicker.h; sourceTree = "<group>"; };
 		54947CE92369E52300986ACA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		54947CF02369E5D100986ACA /* UIColor+SystemAccent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+SystemAccent.swift"; sourceTree = "<group>"; };
+		54947CF12369E5D100986ACA /* DateInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateInputView.swift; sourceTree = "<group>"; };
+		54947CF22369E5D100986ACA /* JBCalendarDateCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JBCalendarDateCell.xib; sourceTree = "<group>"; };
+		54947CF32369E5D100986ACA /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
+		54947CF42369E5D100986ACA /* JBCalendarDateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JBCalendarDateCell.swift; sourceTree = "<group>"; };
+		54947CF52369E5D100986ACA /* JBCalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JBCalendarViewController.swift; sourceTree = "<group>"; };
+		54947CF62369E5D200986ACA /* CalendarDatePickerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalendarDatePickerViewController.h; sourceTree = "<group>"; };
+		54947CF72369E5D200986ACA /* JBCalendarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JBCalendarViewController.xib; sourceTree = "<group>"; };
+		54947CF82369E5D200986ACA /* JBDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JBDatePicker.swift; sourceTree = "<group>"; };
+		54947CF92369E5D200986ACA /* JBDatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JBDatePickerViewController.swift; sourceTree = "<group>"; };
+		54947CFA2369E5D200986ACA /* JBDatePickerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JBDatePickerViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +64,17 @@
 		54947CE72369E52300986ACA /* JBDatePicker */ = {
 			isa = PBXGroup;
 			children = (
+				54947CF62369E5D200986ACA /* CalendarDatePickerViewController.h */,
+				54947CF12369E5D100986ACA /* DateInputView.swift */,
+				54947CF32369E5D100986ACA /* Day.swift */,
+				54947CF42369E5D100986ACA /* JBCalendarDateCell.swift */,
+				54947CF22369E5D100986ACA /* JBCalendarDateCell.xib */,
+				54947CF52369E5D100986ACA /* JBCalendarViewController.swift */,
+				54947CF72369E5D200986ACA /* JBCalendarViewController.xib */,
+				54947CF82369E5D200986ACA /* JBDatePicker.swift */,
+				54947CF92369E5D200986ACA /* JBDatePickerViewController.swift */,
+				54947CFA2369E5D200986ACA /* JBDatePickerViewController.xib */,
+				54947CF02369E5D100986ACA /* UIColor+SystemAccent.swift */,
 				54947CE82369E52300986ACA /* JBDatePicker.h */,
 				54947CE92369E52300986ACA /* Info.plist */,
 			);
@@ -131,6 +160,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54947CFE2369E5D200986ACA /* JBDatePickerViewController.swift in Sources */,
+				54947CFB2369E5D200986ACA /* JBCalendarViewController.swift in Sources */,
+				54947D002369E5D200986ACA /* Day.swift in Sources */,
+				54947D012369E5D200986ACA /* UIColor+SystemAccent.swift in Sources */,
+				54947CFF2369E5D200986ACA /* JBDatePicker.swift in Sources */,
+				54947CFD2369E5D200986ACA /* JBCalendarDateCell.swift in Sources */,
+				54947CFC2369E5D200986ACA /* DateInputView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +304,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = JBDatePicker/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -276,8 +313,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.josh.birnholz.JBDatePicker;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -292,6 +330,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = JBDatePicker/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,8 +339,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.josh.birnholz.JBDatePicker;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
