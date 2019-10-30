@@ -18,7 +18,7 @@ Then add this pod to your targets:
 
 There are two classes you can use: `JBDatePickerViewController` and `JBCalendarViewController`.
 
-They are both similar to `UIDatePickerView`, and their `date`, `minimumDate`, `maximumDate`, `calendar`, and `locale` properties can be configured as you would with a `UIDatePickerView`. Configure them before presenting either of the view controllers.
+They are both similar to `UIDatePicker`, and their `date`, `minimumDate`, `maximumDate`, `calendar`, and `locale` properties can be configured in the same way. Configure them before presenting either of the view controllers.
 
 `JBDatePickerViewController` also has a `datePickerMode` property, although `UIDatePicker.Mode.countDownTimer` is not supported.
 
