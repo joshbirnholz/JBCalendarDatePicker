@@ -8,7 +8,7 @@ s.summary = "A replacement for UIDatePicker made for Catalyst."
 s.requires_arc = true
 
 # 2
-s.version = "0.2.0"
+s.version = "0.2.1"
 
 # 3
 s.license = { :type => "MIT", :file => "LICENSE" }
