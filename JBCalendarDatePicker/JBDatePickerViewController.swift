@@ -533,15 +533,15 @@ extension JBDatePickerViewController: UIKeyInput {
 }
 
 extension JBDatePickerViewController: JBCalendarViewControllerDelegate {
-	func calendarViewControllerDateChanged(_ calendarViewController: JBCalendarViewController) {
+	public func calendarViewControllerDateChanged(_ calendarViewController: JBCalendarViewController) {
 		self.date = calendarViewController.date
 	}
 	
-	func calendarViewControllerWillDismiss(_ calendarViewController: JBCalendarViewController) {
+	public func calendarViewControllerWillDismiss(_ calendarViewController: JBCalendarViewController) {
 		_ = dateInputView.resignFirstResponder()
 	}
 	
-	func calendarViewControllerDidDismiss(_ calendarViewController: JBCalendarViewController) {
+	public func calendarViewControllerDidDismiss(_ calendarViewController: JBCalendarViewController) {
 		
 	}
 }
