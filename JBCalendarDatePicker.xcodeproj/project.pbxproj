@@ -15,6 +15,9 @@
 		54947CFF2369E5D200986ACA /* JBDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54947CF82369E5D200986ACA /* JBDatePicker.swift */; };
 		54947D002369E5D200986ACA /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54947CF32369E5D100986ACA /* Day.swift */; };
 		54947D012369E5D200986ACA /* UIColor+SystemAccent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54947CF02369E5D100986ACA /* UIColor+SystemAccent.swift */; };
+		54947D262369F42300986ACA /* JBCalendarDateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54947D232369F42300986ACA /* JBCalendarDateCell.xib */; };
+		54947D272369F42300986ACA /* JBCalendarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54947D242369F42300986ACA /* JBCalendarViewController.xib */; };
+		54947D282369F42300986ACA /* JBDatePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54947D252369F42300986ACA /* JBDatePickerViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,15 +26,15 @@
 		54947CE92369E52300986ACA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		54947CF02369E5D100986ACA /* UIColor+SystemAccent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+SystemAccent.swift"; sourceTree = "<group>"; };
 		54947CF12369E5D100986ACA /* DateInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateInputView.swift; sourceTree = "<group>"; };
-		54947CF22369E5D100986ACA /* JBCalendarDateCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JBCalendarDateCell.xib; sourceTree = "<group>"; };
 		54947CF32369E5D100986ACA /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 		54947CF42369E5D100986ACA /* JBCalendarDateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JBCalendarDateCell.swift; sourceTree = "<group>"; };
 		54947CF52369E5D100986ACA /* JBCalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JBCalendarViewController.swift; sourceTree = "<group>"; };
 		54947CF62369E5D200986ACA /* CalendarDatePickerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalendarDatePickerViewController.h; sourceTree = "<group>"; };
-		54947CF72369E5D200986ACA /* JBCalendarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JBCalendarViewController.xib; sourceTree = "<group>"; };
 		54947CF82369E5D200986ACA /* JBDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JBDatePicker.swift; sourceTree = "<group>"; };
 		54947CF92369E5D200986ACA /* JBDatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JBDatePickerViewController.swift; sourceTree = "<group>"; };
-		54947CFA2369E5D200986ACA /* JBDatePickerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JBDatePickerViewController.xib; sourceTree = "<group>"; };
+		54947D232369F42300986ACA /* JBCalendarDateCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JBCalendarDateCell.xib; sourceTree = "<group>"; };
+		54947D242369F42300986ACA /* JBCalendarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JBCalendarViewController.xib; sourceTree = "<group>"; };
+		54947D252369F42300986ACA /* JBDatePickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JBDatePickerViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +53,7 @@
 			children = (
 				54947CE72369E52300986ACA /* JBCalendarDatePicker */,
 				54947CE62369E52300986ACA /* Products */,
+				54947D292369F4AA00986ACA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,17 +72,24 @@
 				54947CF12369E5D100986ACA /* DateInputView.swift */,
 				54947CF32369E5D100986ACA /* Day.swift */,
 				54947CF42369E5D100986ACA /* JBCalendarDateCell.swift */,
-				54947CF22369E5D100986ACA /* JBCalendarDateCell.xib */,
 				54947CF52369E5D100986ACA /* JBCalendarViewController.swift */,
-				54947CF72369E5D200986ACA /* JBCalendarViewController.xib */,
 				54947CF82369E5D200986ACA /* JBDatePicker.swift */,
 				54947CF92369E5D200986ACA /* JBDatePickerViewController.swift */,
-				54947CFA2369E5D200986ACA /* JBDatePickerViewController.xib */,
+				54947D232369F42300986ACA /* JBCalendarDateCell.xib */,
+				54947D242369F42300986ACA /* JBCalendarViewController.xib */,
+				54947D252369F42300986ACA /* JBDatePickerViewController.xib */,
 				54947CF02369E5D100986ACA /* UIColor+SystemAccent.swift */,
 				54947CE82369E52300986ACA /* JBCalendarDatePicker.h */,
 				54947CE92369E52300986ACA /* Info.plist */,
 			);
 			path = JBCalendarDatePicker;
+			sourceTree = "<group>";
+		};
+		54947D292369F4AA00986ACA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,6 +130,7 @@
 		54947CDC2369E52300986ACA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1110;
 				LastUpgradeCheck = 1110;
 				ORGANIZATIONNAME = "Josh Birnholz";
 				TargetAttributes = {
@@ -150,6 +162,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54947D282369F42300986ACA /* JBDatePickerViewController.xib in Resources */,
+				54947D272369F42300986ACA /* JBCalendarViewController.xib in Resources */,
+				54947D262369F42300986ACA /* JBCalendarDateCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

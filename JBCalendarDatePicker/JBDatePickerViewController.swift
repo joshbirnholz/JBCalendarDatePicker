@@ -510,7 +510,7 @@ extension JBDatePickerViewController: UIKeyInput {
 			} else {
 				updateLabelText()
 			}
-		} else if datePart == .amPM {
+		} else if datePart == .amPM && !textInputString.isEmpty {
 			if calendar.amSymbol.lowercased().hasPrefix(textInputString.lowercased()) && isPM {
 				isPM = false
 				print("setting to am")
