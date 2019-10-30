@@ -44,6 +44,16 @@ They are both similar to `UIDatePickerView`, and their `date`, `minimumDate`, `m
 		}
 	}
 
+Or use it from a storyboard. Drag a Container View onto your storyboard. Change the view controller's class to `JBCalendarDatePickerViewController`. Give the embed segue an identifier, and then capture a reference to it:
+
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		if segue.identifier == "Embed Date Picker", let destination = segue.destination as? JBDatePickerViewController {
+			self.datePicker = destination
+			// Configure the datePicker's properties
+		}
+	}
+
+
 ### JBCalendarViewController
 
 ![JBCalendarViewController](https://i.imgur.com/NV48jUk.png)
