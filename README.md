@@ -26,33 +26,36 @@ They are both similar to `UIDatePickerView`, and their `date`, `minimumDate`, `m
 
 `JBDatePickerViewController` displays labels showing its represented date and allows the user to use the keyboard to enter a date. When the user clicks on the date portion, the view controller presents its own `JBCalendarViewController`. You can allow the user to select a date, time, or both, by setting the `datePickerMode` property.
 
-    import JBCalendarDatePicker
-    
-    class ViewController: UIViewController {
-	    var datePicker: JBDatePickerViewController!
+```Swift
+import JBCalendarDatePicker
 
-		override func viewDidLoad() {
-			super.viewDidLoad()
+class ViewController: UIViewController {
 
-			let datePicker = JBDatePickerViewController()
-			view.addSubview(datePicker.view)
-			addChild(datePicker)
-			datePicker.didMove(toParent: self)
-			self.datePicker = datePicker
+	var datePicker: JBDatePickerViewController!
+	
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		let datePicker = JBDatePickerViewController()
+		view.addSubview(datePicker.view)
+		addChild(datePicker)
+		datePicker.didMove(toParent: self)
+		self.datePicker = datePicker
 
-			// Configure the datePicker's properties
-		}
+		// Configure the datePicker's properties
 	}
+}
+```
 
 Or use it from a storyboard. Drag a Container View onto your storyboard. Change the view controller's class to `JBCalendarDatePickerViewController`. Give the embed segue an identifier, and then capture a reference to it:
 
-	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-		if segue.identifier == "Embed Date Picker", let destination = segue.destination as? JBDatePickerViewController {
-			self.datePicker = destination
-			// Configure the datePicker's properties
-		}
+```Swift
+override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+	if segue.identifier == "Embed Date Picker", let destination = segue.destination as? JBDatePickerViewController {
+		self.datePicker = destination
+		// Configure the datePicker's properties
 	}
-
+}
+```
 
 ### JBCalendarViewController
 
@@ -62,8 +65,10 @@ Or use it from a storyboard. Drag a Container View onto your storyboard. Change 
 
 The view controller tries to present itself as a popover automatically, so be sure to set the `popoverPresentationController`'s `barButtonItem` property or the `sourceView` and `sourceRect` properties.
 
-    @IBOutlet func buttonPressed(_ sender: UIBarButtonItem) {
-        let calendarPicker = JBCalendarViewController()
-        calendarPicker.popoverPresentationController?.barButtonItem = sender
-        present(calendarPicker, animated: true, completion: nil)
-    }
+```Swift
+@IBOutlet func buttonPressed(_ sender: UIBarButtonItem) {
+	let calendarPicker = JBCalendarViewController()
+	calendarPicker.popoverPresentationController?.barButtonItem = sender
+	present(calendarPicker, animated: true, completion: nil)
+}
+```
