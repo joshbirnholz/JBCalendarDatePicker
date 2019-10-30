@@ -35,6 +35,7 @@ class ViewController: UIViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		
 		let datePicker = JBDatePickerViewController()
 		view.addSubview(datePicker.view)
 		addChild(datePicker)
@@ -52,6 +53,7 @@ Or use it from a storyboard. Drag a Container View onto your storyboard. Change 
 override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 	if segue.identifier == "Embed Date Picker", let destination = segue.destination as? JBDatePickerViewController {
 		self.datePicker = destination
+		
 		// Configure the datePicker's properties
 	}
 }
@@ -69,6 +71,9 @@ The view controller tries to present itself as a popover automatically, so be su
 @IBOutlet func buttonPressed(_ sender: UIBarButtonItem) {
 	let calendarPicker = JBCalendarViewController()
 	calendarPicker.popoverPresentationController?.barButtonItem = sender
+	
+	// Configure the calendar's properties
+	
 	present(calendarPicker, animated: true, completion: nil)
 }
 ```
