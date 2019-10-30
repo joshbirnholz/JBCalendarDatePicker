@@ -51,7 +51,7 @@ class ViewController: UIViewController {
 }
 ```
 
-Or use it from a storyboard. Drag a Container View onto your storyboard. Change the view controller's class to `JBCalendarDatePickerViewController`. Give the embed segue an identifier, and then capture a reference to it:
+Or use it from a storyboard. Drag a Container View onto your storyboard. Change the view controller's class to `JBDatePickerViewController`. Give the embed segue an identifier, and then capture a reference to it:
 
 ```Swift
 override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
