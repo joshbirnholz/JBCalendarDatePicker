@@ -22,7 +22,7 @@ They are both similar to `UIDatePickerView`, and their `date`, `minimumDate`, `m
 
 ### JBDatePickerViewController
 
-![enter image description here](https://i.imgur.com/OtPr5V7.png =245x239)
+![JBDatePickerViewController](https://i.imgur.com/OtPr5V7.png)
 
 `JBDatePickerViewController` displays labels showing its represented date and allows the user to use the keyboard to enter a date. When the user clicks on the date portion, the view controller presents its own `JBCalendarViewController`. You can allow the user to select a date, time, or both, by setting the `datePickerMode` property.
 
@@ -46,7 +46,7 @@ They are both similar to `UIDatePickerView`, and their `date`, `minimumDate`, `m
 
 ### JBCalendarViewController
 
-![enter image description here](https://i.imgur.com/NV48jUk.png =188x)
+![JBCalendarViewController](https://i.imgur.com/NV48jUk.png)
 
 `JBCalendarViewController` is just the calendar, without the labels.
 
