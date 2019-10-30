@@ -79,3 +79,12 @@ The view controller tries to present itself as a popover automatically, so be su
 	present(calendarPicker, animated: true, completion: nil)
 }
 ```
+There is also a `JBCalendarViewControllerDelegate` protocol.
+
+```Swift
+public protocol JBCalendarViewControllerDelegate: class {
+	func calendarViewControllerDateChanged(_ calendarViewController: JBCalendarViewController)
+	func calendarViewControllerWillDismiss(_ calendarViewController: JBCalendarViewController)
+	func calendarViewControllerDidDismiss(_ calendarViewController: JBCalendarViewController)
+}
+```

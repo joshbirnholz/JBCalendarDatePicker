@@ -35,6 +35,8 @@
 		54947D232369F42300986ACA /* JBCalendarDateCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JBCalendarDateCell.xib; sourceTree = "<group>"; };
 		54947D242369F42300986ACA /* JBCalendarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JBCalendarViewController.xib; sourceTree = "<group>"; };
 		54947D252369F42300986ACA /* JBDatePickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JBDatePickerViewController.xib; sourceTree = "<group>"; };
+		54947D30236A13B900986ACA /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		54947D31236A13FC00986ACA /* JBCalendarDatePicker.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; path = JBCalendarDatePicker.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,8 @@
 		54947CDB2369E52300986ACA = {
 			isa = PBXGroup;
 			children = (
+				54947D30236A13B900986ACA /* README.md */,
+				54947D31236A13FC00986ACA /* JBCalendarDatePicker.podspec */,
 				54947CE72369E52300986ACA /* JBCalendarDatePicker */,
 				54947CE62369E52300986ACA /* Products */,
 				54947D292369F4AA00986ACA /* Frameworks */,
@@ -325,7 +329,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.2.2;
+				MARKETING_VERSION = 0.2.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.josh.birnholz.JBCalendarDatePicker;
 				PRODUCT_NAME = JBCalendarDatePicker;
 				SKIP_INSTALL = YES;
@@ -352,7 +356,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.2.2;
+				MARKETING_VERSION = 0.2.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.josh.birnholz.JBCalendarDatePicker;
 				PRODUCT_NAME = JBCalendarDatePicker;
 				SKIP_INSTALL = YES;

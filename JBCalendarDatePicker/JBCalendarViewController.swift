@@ -16,7 +16,7 @@ public protocol JBCalendarViewControllerDelegate: class {
 
 public class JBCalendarViewController: UIViewController, JBDatePicker {
 	
-	weak var delegate: JBCalendarViewControllerDelegate?
+	public weak var delegate: JBCalendarViewControllerDelegate?
 
 	@IBOutlet private weak var monthLabel: UILabel!
 	@IBOutlet private weak var collectionView: UICollectionView!
