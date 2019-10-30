@@ -211,7 +211,7 @@ public class JBDatePickerViewController: UIViewController, DateInputViewDelegate
 			case .day:
 				components.setValue(value, for: .day)
 			case .month:
-				#warning("TODO: Set day to last day of month when the date range for the new month doesn't include the old day.")
+				// TODO: Set day to last day of month when the date range for the new month doesn't include the old day.
 				components.setValue(value, for: .month)
 			case .year:
 				components.setValue(value, for: .year)
@@ -419,7 +419,7 @@ extension JBDatePickerViewController: UIKeyInput {
 	}
 	
 	fileprivate func selectNextDatePart() {
-		#warning("TODO: skip over hidden date parts")
+		// TODO: skip over hidden date parts
 		guard let selectedDatePart = selectedDatePart else { return }
 		if let index = dateParts.lastIndex(of: selectedDatePart), dateParts.indices.contains(index+1) {
 			self.selectedDatePart = dateParts[index+1]
