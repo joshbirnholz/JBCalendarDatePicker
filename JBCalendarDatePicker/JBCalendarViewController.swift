@@ -8,12 +8,11 @@
 
 import UIKit
 
-protocol JBCalendarViewControllerDelegate: class {
+public protocol JBCalendarViewControllerDelegate: class {
 	func calendarViewControllerDateChanged(_ calendarViewController: JBCalendarViewController)
 	func calendarViewControllerWillDismiss(_ calendarViewController: JBCalendarViewController)
 	func calendarViewControllerDidDismiss(_ calendarViewController: JBCalendarViewController)
 }
-
 
 public class JBCalendarViewController: UIViewController, JBDatePicker {
 	
