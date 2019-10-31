@@ -8,7 +8,7 @@
 
 import UIKit
 
-public protocol JBCalendarViewControllerDelegate: class {
+@objc public protocol JBCalendarViewControllerDelegate: class {
 	func calendarViewControllerDateChanged(_ calendarViewController: JBCalendarViewController)
 	func calendarViewControllerWillDismiss(_ calendarViewController: JBCalendarViewController)
 	func calendarViewControllerDidDismiss(_ calendarViewController: JBCalendarViewController)
@@ -16,7 +16,7 @@ public protocol JBCalendarViewControllerDelegate: class {
 
 public class JBCalendarViewController: UIViewController, JBDatePicker {
 	
-	public weak var delegate: JBCalendarViewControllerDelegate?
+	@objc public weak var delegate: JBCalendarViewControllerDelegate?
 
 	@IBOutlet private weak var monthLabel: UILabel!
 	@IBOutlet private weak var collectionView: UICollectionView!
@@ -24,7 +24,7 @@ public class JBCalendarViewController: UIViewController, JBDatePicker {
 	@IBOutlet private var weekSymbolLabels: [UILabel]!
 	
 	/// This property always returns `UIDatePicker.Mode.date`. Setting this property to a new value does nothing. It is not possible to change the date picker mode of the calendar interface.
-	public var datePickerMode: UIDatePicker.Mode {
+	@objc public var datePickerMode: UIDatePicker.Mode {
 		get {
 			return .date
 		}
@@ -33,7 +33,7 @@ public class JBCalendarViewController: UIViewController, JBDatePicker {
 		}
 	}
 	
-	public var calendar: Calendar! = Calendar.current {
+	@objc public var calendar: Calendar! = Calendar.current {
 		didSet {
 			if calendar == nil {
 				calendar = .current
@@ -42,13 +42,13 @@ public class JBCalendarViewController: UIViewController, JBDatePicker {
 		}
 	}
 	
-	public var locale: Locale? = .current {
+	@objc public var locale: Locale? = .current {
 		didSet {
 			calendar.locale = locale
 		}
 	}
 	
-	public var date: Date = Date() {
+	@objc public var date: Date = Date() {
 		didSet {
 			switch (minimumDate, maximumDate) {
 			case(let minimumDate?, let maximumDate?) where minimumDate < maximumDate :
@@ -75,12 +75,12 @@ public class JBCalendarViewController: UIViewController, JBDatePicker {
 		}
 	}
 	
-	public var minimumDate: Date? {
+	@objc public var minimumDate: Date? {
 		didSet {
 			collectionView?.reloadData()
 		}
 	}
-	public var maximumDate: Date? {
+	@objc public var maximumDate: Date? {
 		didSet {
 			collectionView?.reloadData()
 		}
@@ -224,7 +224,7 @@ public class JBCalendarViewController: UIViewController, JBDatePicker {
 		days = range.map { Day(calendar: calendar, day: $0, month: current.month, year: current.year) }
 		
 		let startDate = calendar.dateInterval(of: .month, for: date)!.start
-		let weekday = calendar.dateComponents([.weekday], from: startDate).weekday!
+		let weekday = calendar.component(.weekday, from: startDate)
 		
 		let firstDay = days.first!
 		for i in 0 ..< weekday-1 {
@@ -308,7 +308,7 @@ public class JBCalendarViewController: UIViewController, JBDatePicker {
 		} else if panGesture.state == .changed, let indexPath = collectionView.indexPathForItem(at: panGesture.location(in: collectionView)) {
 			let day = days[indexPath.row]
 			let date = DateComponents(calendar: calendar, year: current.year, month: current.month, day: day.day).date!
-			let month = calendar.dateComponents([.month], from: date).month!
+			let month = calendar.component(.month, from: date)
 			
 			if month == current.month || -lastPanChangeDate.timeIntervalSinceNow > 0.8 {
 				self.collectionView.selectItem(at: indexPath, animated: false, scrollPosition: [])

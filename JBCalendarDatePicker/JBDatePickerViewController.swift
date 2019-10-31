@@ -19,7 +19,7 @@ public class JBDatePickerViewController: UIViewController, DateInputViewDelegate
 	/// Use this property to change the type of information displayed by the date picker. It determines whether the date picker allows selection of a date, a time, or both date and time. The default mode is `UIDatePicker.Mode.dateAndTime`. See `UIDatePicker.Mode` for a list of mode constants.
 	///
 	/// Setting this property to `UIDatePicker.Mode.countDownTimer` has no effect; this date picker does not support the countdown timer mode.
-	public var datePickerMode: UIDatePicker.Mode = .dateAndTime {
+	@objc public var datePickerMode: UIDatePicker.Mode = .dateAndTime {
 		didSet {
 			if datePickerMode == .countDownTimer {
 				datePickerMode = oldValue
@@ -39,13 +39,13 @@ public class JBDatePickerViewController: UIViewController, DateInputViewDelegate
 		}
 	}
 	
-	public var locale: Locale? = .current {
+	@objc public var locale: Locale? = .current {
 		didSet {
 			calendar.locale = locale
 		}
 	}
 	
-	public var date: Date = Date() {
+	@objc public var date: Date = Date() {
 		didSet {
 			switch (minimumDate, maximumDate) {
 			case(let minimumDate?, let maximumDate?) where minimumDate < maximumDate :
@@ -68,12 +68,12 @@ public class JBDatePickerViewController: UIViewController, DateInputViewDelegate
 		}
 	}
 	
-	public var minimumDate: Date? {
+	@objc public var minimumDate: Date? {
 		didSet {
 			updateLabelText()
 		}
 	}
-	public var maximumDate: Date? {
+	@objc public var maximumDate: Date? {
 		didSet {
 			updateLabelText()
 		}
@@ -156,6 +156,8 @@ public class JBDatePickerViewController: UIViewController, DateInputViewDelegate
 		#if targetEnvironment(macCatalyst)
 		view.tintColor = .systemAccent
 		#endif
+		
+		isPM = (12...23).contains(calendar.component(.hour, from: date))
 		
 		datePartsStackView.isHidden = datePickerMode == .time
 		timePartsStackView.isHidden = datePickerMode == .date
@@ -343,24 +345,31 @@ public class JBDatePickerViewController: UIViewController, DateInputViewDelegate
 	private let formatter = DateFormatter()
 	
 	private var visibleDateParts: [DatePart] {
-		switch datePickerMode {
-		case .time:
-			if dateParts.contains(.hour12) {
-				return [.hour12, .minute, .amPM]
-			} else {
-				return [.hour24, .minute]
+		let allowedDateParts: Set<DatePart> = {
+			switch datePickerMode {
+			case .time:
+				if dateParts.contains(.hour12) {
+					return [.hour12, .minute, .amPM]
+				} else {
+					return [.hour24, .minute]
+				}
+			case .date:
+				return [.year, .month, .day]
+			default:
+				var returnValue: Set<DatePart> = [.year, .month, .day]
+				if dateParts.contains(.hour12) {
+					returnValue.insert(.hour12)
+					returnValue.insert(.minute)
+					returnValue.insert(.amPM)
+				} else {
+					returnValue.insert(.hour24)
+					returnValue.insert(.minute)
+				}
+				return returnValue
 			}
-		case .date:
-			return [.year, .month, .day]
-		default:
-			var returnValue: [DatePart] = [.year, .month, .day]
-			if dateParts.contains(.hour12) {
-				returnValue.append(contentsOf: [.hour12, .minute, .amPM])
-			} else {
-				returnValue.append(contentsOf: [.hour24, .minute])
-			}
-			return returnValue
-		}
+		}()
+		
+		return dateParts.filter { allowedDateParts.contains($0) }
 	}
 	
 //	private var labelsAndDateParts: [(UILabel, DatePart)] {
@@ -419,12 +428,11 @@ extension JBDatePickerViewController: UIKeyInput {
 	}
 	
 	fileprivate func selectNextDatePart() {
-		// TODO: skip over hidden date parts
 		guard let selectedDatePart = selectedDatePart else { return }
-		if let index = dateParts.lastIndex(of: selectedDatePart), dateParts.indices.contains(index+1) {
-			self.selectedDatePart = dateParts[index+1]
+		if let index = visibleDateParts.lastIndex(of: selectedDatePart), visibleDateParts.indices.contains(index+1) {
+			self.selectedDatePart = visibleDateParts[index+1]
 		} else {
-			self.selectedDatePart = dateParts.first
+			self.selectedDatePart = visibleDateParts.first
 		}
 	}
 	
