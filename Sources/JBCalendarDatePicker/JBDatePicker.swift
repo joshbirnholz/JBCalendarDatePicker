@@ -6,7 +6,9 @@
 //  Copyright © 2019 Josh Birnholz. All rights reserved.
 //
 
+#if canImport(UIKit)
 import UIKit
+
 
 public protocol JBDatePicker: UIResponder {
 	var date: Date { get set }
@@ -16,3 +18,4 @@ public protocol JBDatePicker: UIResponder {
 	var maximumDate: Date? { get set }
 	var datePickerMode: UIDatePicker.Mode { get set }
 }
+#endif

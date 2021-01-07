@@ -6,6 +6,7 @@
 //  Copyright © 2019 Josh Birnholz. All rights reserved.
 //
 
+#if canImport(UIKit)
 import UIKit
 
 protocol DateInputViewDelegate: UIResponder, UIKeyInput {
@@ -54,3 +55,4 @@ class DateInputView: UIView, UIKeyInput {
 	}
 
 }
+#endif

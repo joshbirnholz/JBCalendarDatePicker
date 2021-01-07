@@ -6,7 +6,7 @@
 //  Copyright © 2019 Josh Birnholz. All rights reserved.
 //
 
-
+#if canImport(UIKit)
 import UIKit
 
 extension UIColor {
@@ -64,3 +64,5 @@ extension UIColor {
 		}
 	}
 }
+
+#endif

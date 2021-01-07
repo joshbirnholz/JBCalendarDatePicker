@@ -6,6 +6,7 @@
 //  Copyright © 2019 Josh Birnholz. All rights reserved.
 //
 
+#if canImport(UIKit)
 import UIKit
 
 public class JBDatePickerViewController: UIViewController, DateInputViewDelegate, JBDatePicker {
@@ -553,3 +554,5 @@ extension JBDatePickerViewController: JBCalendarViewControllerDelegate {
 		
 	}
 }
+
+#endif
