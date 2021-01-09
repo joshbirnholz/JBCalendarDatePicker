@@ -25,10 +25,7 @@ let package = Package(
             name: "JBCalendarDatePicker",
             dependencies: [],
             path: "Sources",
-            exclude: ["Info.plist"],
-            resources: [
-                .process("Resources")
-            ]
+            exclude: ["Info.plist"]
         ),
         .testTarget(
             name: "JBCalendarDatePickerTests",
