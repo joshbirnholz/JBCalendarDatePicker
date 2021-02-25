@@ -8,6 +8,12 @@ This is still a work in progress, there are bugs, and although it's written to w
 
 ## Installation
 
+To install as SPM, Go to:
+`Xcode -> File -> Swift Packages -> Add Package Dependency`
+
+Then enter this URL:
+`https://github.com/mohitnandwani/JBCalendarDatePicker.git`
+
 To install, add the source to the top of your podfile:
 
 `source 'https://github.com/joshbirnholz/JBPodSpecs.git'`
